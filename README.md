@@ -7,7 +7,6 @@ docker ps
 docker stop 容器id
 # 进入容器进行终端输入
 docker exec -it 容器id bash
-
 ```
 
 # share image
