@@ -1,3 +1,9 @@
+# dockerfile.simplestExample.md
+a simple example of docker file
+
+# dockerfile.explain.md
+include most syntax and grammar of dockerfile
+
 # 05常用命令
 ```shell
 # 构建镜像
@@ -7,6 +13,7 @@ docker ps
 docker stop 容器id
 # 进入容器进行终端输入
 docker exec -it 容器id bash
+
 ```
 
 # share image
@@ -108,17 +115,23 @@ EXPOSE 80
 
 # daemon = 守护程序
 # compose = 多个容器一起运作
-# volume 外置映射存储
+# volume 外置映射存储 持久化存储
 ```bash
 docker run -v /usr/share/ngnix/html nginx
+# /usr/share/Nginx/HTML 是容器内部路径
+# nginx 是容器的名字
 
 docker run -d --name Nginx -v /usr/share/Nginx/html Nginx
+# -d 是作为daemon运行
+# --name 是程序的名字
 
 # 检查镜像文件
 docker inspect Nginx
 # 从配置文件中找到 mount下的source
-# 得到如 /var/lib/...
-# 打开文件
+# 得到如 /var/lib/.../
+# destination 就是上面的地址 /usr/share/nginx
+
+# 打开路径,Linux可以直接进入路径
 screen ~/Library/Container/com.docker.docker/Data/com.docker.amd64-linux/tty
 
 # 当前位置下的code文件夹映射到镜像中dhtml文件夹 运行 Nginx镜像;
