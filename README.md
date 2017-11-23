@@ -331,6 +331,11 @@ EXPOSE 8888
 
 CMD jupyter notebook --port=8888 --ip=0.0.0.0
 ```
+# docker windows 改变镜像存储位置
+http://blog.csdn.net/stemq/article/details/53150939
+
+1. 开始菜单右键->控制面板->管理工具->Hyper-V 管理器->虚拟机右键设置。如图1
+2. 将默认C:\\Users\\Public\\Documents\\Hyper-V\\Virtual hard disks\\MobyLinuxVM.vhdx的文件拷贝到想要改变的路径,我这里拷贝到D:\\vmwork\\Virtual Hard Disks路径下，然后点击浏览读取并确定保存设置，如图2。
 
 
 # sources
